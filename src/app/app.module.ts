@@ -32,6 +32,8 @@ import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail
 @NgModule({
   declarations: [
     AppComponent,
+
+
     GestionGuideComponent,
     GestionEvenementComponent,
     GestionCommentaireComponent,

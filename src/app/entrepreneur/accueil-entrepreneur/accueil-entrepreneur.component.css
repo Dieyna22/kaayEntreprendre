@@ -1,0 +1,13 @@
+input, textarea{
+    border-bottom: 2px solid #60b8c4;
+}
+.btnAjout{
+    background-color: #60b8c4;
+    color: white;
+    font-weight: bold;
+}
+.btnClose{
+    outline: 1px solid #60b8c4;
+    color: #60b8c4;
+    font-weight: bold;
+}
