@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GestionGuideComponent } from './admin/gestion-guide/gestion-guide.component';
@@ -29,9 +30,12 @@ import { ExperienceComponent } from './entrepreneur/experience/experience.compon
 import { DetailExperienceComponent } from './entrepreneur/detail-experience/detail-experience.component';
 import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail-ressource.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
+
     GestionGuideComponent,
     GestionEvenementComponent,
     GestionCommentaireComponent,
@@ -55,6 +59,7 @@ import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail
     ExperienceComponent,
     DetailExperienceComponent,
     DetailRessourceComponent,
+
   ],
   imports: [
     BrowserModule,
