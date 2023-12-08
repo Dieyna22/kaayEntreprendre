@@ -1,109 +1,83 @@
 <div class="container-scroller">
     <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-            <a class="sidebar-brand brand-logo text-white" href="index.html" style="font-weight: bold; font-size: 1.6em;">G6 ACADEMY</a>
-            <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
-                    alt="logo" /></a>
+    <nav class="sidebar sidebar-offcanvas " id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center fixed-top ">
+           
         </div>
         <ul class="nav">
-            <li class="nav-item profile">
-                <div class="profile-desc">
-                    <div class="profile-pic">
-                        <div class="count-indicator">
-                            <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-                            <span class="count bg-success"></span>
-                        </div>
-                        <div class="profile-name">
-                            <h5 class="mb-0 font-weight-normal">Admin</h5>
-
-                        </div>
-                    </div>
-
-                </div>
-            </li>
             <li class="nav-item nav-category">
-                <span class="nav-link"></span>
+                <span class="nav-link mb-5 ">   <img src="" alt="logo" class=""></span>
+             
             </li>
             <li class="nav-item menu-items">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" >
                     <span class="menu-icon">
                         <i class="mdi mdi-speedometer text-white"></i>
                     </span>
-                    <span class="menu-title">Dashboard</span>
+                    <span class="menu-title menuside fw-bold " >Tableau de bord</span>
                 </a>
             </li>
             <li class="nav-item menu-items">
-                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                <a  class="nav-link " [routerLink]="['/accueilUser']">
+                    <span class="menu-icon">
+                        <i class="bi bi-house-door-fill text-white"></i>
+                    </span>
+                    <span class="menu-title menuside fw-bold">Accueil</span>
+                </a>
+            </li>
+            <li class="nav-item menu-items isactive">
+                <a class="nav-link " data-toggle="collapse" href="#ui-basic" aria-expanded="false"
                     aria-controls="ui-basic">
                     <span class="menu-icon">
-                        <i class="mdi mdi-laptop text-white"></i>
+                        <i class="bi bi-person-fill text-white"></i>
                     </span>
-                    <span class="menu-title">Gestion professeur</span>
-                    <i class="menu-arrow"></i>
+                    <span class="menu-title isactive menuside fw-bold">Gestion projets</span>
+                  
                 </a>
-                <div class="collapse" id="ui-basic">
-                    <ul class="nav flex-column sub-menu">
-                        <li class="nav-item" [routerLink]="['/listeprofesseur']"> liste des
-                                profs</li>
-                    </ul>
-                </div>
+             
             </li>
             <li class="nav-item menu-items">
-                <a class="nav-link" data-toggle="collapse" href="#ui-basics" aria-expanded="false"
-                    aria-controls="ui-basic">
+                <a class="nav-link" [routerLink]="['/ressourceEntrepreneur']">
                     <span class="menu-icon">
-                        <i class="mdi mdi-laptop text-white"></i>
+                        <i class="bi bi-collection-fill text-white"></i>
                     </span>
-                    <span class="menu-title">Gestion apprenant</span>
-                    <i class="menu-arrow"></i>
+                    <span class="menu-title menuside fw-bold">Gestion Ressources</span>
+                 
                 </a>
-                <div class="collapse" id="ui-basics">
-                    <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"  [routerLink]="['/gestionapprenant']"> liste des
-                                apprenants</li>
-                    </ul>
-                </div>
+               
             </li>
-            <li class="nav-item menu-items d-flex mx-3">
-      
+            <li class="nav-item menu-items">
+                <a class="nav-link" [routerLink]="['/forum']">
                     <span class="menu-icon">
-                        <i class="mdi mdi-table-large text-white"></i>
+                        <i class="bi bi-chat-left-fill text-white"></i>
                     </span>
-                    <span class="menu-title fs-6">Liste classe</span>
-                
+                    <span class="menu-title menuside fw-bold">Forum</span>
+                  
+                </a>
+               
             </li>
+        
 
         </ul>
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row">
-            <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
-                        alt="logo" /></a>
+        <nav class="navbar p-0 fixed-top d-flex flex-row ">
+            <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center 
+            ">
+                <a class="navbar-brand brand-logo-mini" href="index.html"></a>
             </div>
             <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-                <button class="navbar-toggler navbar-toggler align-self-center" type="button"
-                    data-toggle="minimize">
-                    <span class="mdi mdi-menu" style="font-size: 2.5em;"></span>
-                </button>
+               
                 <ul class="navbar-nav w-100">
-                    <li class="nav-item w-100">
-                        <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search" id="search">
-                            <input type="text" class="form-control" placeholder="Rechercher">
+                    <li class="nav-item w-100 d-flex justify-content-end">
+                        <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex   search " id="search">
+                            <input type="text" class="form-control d-flex justify-content-end" placeholder="Rechercher">
                         </form>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown"
-                            data-toggle="dropdown" aria-expanded="false" href="#">+ Ajouter une classe</a>
-
-                    </li>
-
-
                     <li class="nav-item dropdown border-left">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
                             data-toggle="dropdown">
@@ -188,13 +162,13 @@
             </div>
         </nav>
         <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper">
+        <div class="main-panel ">
+            <div class="content-wrapper ">
                 <div class="row">
                     <div class="col-sm-4 grid-margin">
                         <div class="card">
-                            <div class="card-body border-0 " style="background-color: #CE6A6B; border:none !important" >
-                                <h5>Nombre d'eleve</h5>
+                            <div class="card-body border-0" style=" border:none !important" >
+                                <h5>Projets publiés</h5>
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
@@ -203,17 +177,15 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                        <i class="fa-solid  fa-graduation-cap" style="color: #ffffff; font-size: 3em;"></i>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 grid-margin">
                         <div class="card">
-                            <div class="card-body " style="background-color: #CE6A6B; border:none !important">
-                                <h5>Nombre de professeur</h5>
+                            <div class="card-body " style=" border:none !important">
+                                <h5>Ressources publiées</h5>
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
@@ -221,17 +193,15 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                        <i class="fa-solid fa-chalkboard-user" style="color: #ffffff; font-size: 3em;"></i>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 grid-margin">
                         <div class="card">
-                            <div class="card-body" style="background-color: #CE6A6B; border:none !important">
-                                <h5>Nombre de classe</h5>
+                            <div class="card-body" style=" border:none !important">
+                                <h5>Experience publiées</h5>
                                 <div class="row">
                                     <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                         <div class="d-flex d-sm-block d-md-flex align-items-center">
@@ -240,126 +210,67 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                        <i class="fa-solid fa-school" style="color: #ffffff; font-size: 3em;"></i>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row ">
-                       <!-- Button trigger modal -->
-      
-                <div class="col-12 grid-margin">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title text-dark">Liste des professeurs</h4>
-                            <div class="table-responsive" style="color: black;">
-                                <table class="table" style="color: black;">
-                                    <thead style="color: black;">
-                                        <tr>
-                                            
-                                            <th style="color: black;"> Client Name </th>
-                                            <th style="color: black;"> Order No </th>
-                                            <th style="color: black;"> Product Cost </th>
-                                            <th style="color: black;"> Project </th>
-                                            <th style="color: black;"> Payment Mode </th>
-                                            <th style="color: black;"> Start Date </th>
-                                            <th style="color: black;"> Payment Status </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/faces/face1.jpg" alt="image" />
-                                                <span class="pl-2">Henry Klein</span>
-                                            </td>
-                                            <td> 02312 </td>
-                                            <td> $14,500 </td>
-                                            <td> Dashboard </td>
-                                            <td> Credit card </td>
-                                            <td> 04 Dec 2019 </td>
-                                            <td>
-                                                <div class="badge badge-outline-success">Approved</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            <td>
-                                                <img src="assets/images/faces/face2.jpg" alt="image" />
-                                                <span class="pl-2">Estella Bryan</span>
-                                            </td>
-                                            <td> 02312 </td>
-                                            <td> $14,500 </td>
-                                            <td> Website </td>
-                                            <td> Cash on delivered </td>
-                                            <td> 04 Dec 2019 </td>
-                                            <td>
-                                                <div class="badge badge-outline-warning">Pending</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/faces/face5.jpg" alt="image" />
-                                                <span class="pl-2">Lucy Abbott</span>
-                                            </td>
-                                            <td> 02312 </td>
-                                            <td> $14,500 </td>
-                                            <td> App design </td>
-                                            <td> Credit card </td>
-                                            <td> 04 Dec 2019 </td>
-                                            <td>
-                                                <div class="badge badge-outline-danger">Rejected</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/faces/face3.jpg" alt="image" />
-                                                <span class="pl-2">Peter Gill</span>
-                                            </td>
-                                            <td> 02312 </td>
-                                            <td> $14,500 </td>
-                                            <td> Development </td>
-                                            <td> Online Payment </td>
-                                            <td> 04 Dec 2019 </td>
-                                            <td>
-                                                <div class="badge badge-outline-success">Approved</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="assets/images/faces/face4.jpg" alt="image" />
-                                                <span class="pl-2">Sallie Reyes</span>
-                                            </td>
-                                            <td> 02312 </td>
-                                            <td> $14,500 </td>
-                                            <td> Website </td>
-                                            <td> Credit card </td>
-                                            <td> 04 Dec 2019 </td>
-                                            <td>
-                                                <div class="badge badge-outline-success">Approved</div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div class="container">
+                    <h4 class="text-center mb-3">Mes projets</h4>
+                <button type="button" class="btn btnAjout mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ajouter projet
+                  </button>
+
+                  <div class="container  mx-auto">
+                    <div class="mesCartes row gap-2 ">
+                        <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
+                            <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
+                            <div class="container mt-2">
+                               <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
+                              <p class="card-text datepub">Publié le 23/12/2012</p>
+                             
                             </div>
-                        </div>
+                          </div>
+                        <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
+                            <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
+                            <div class="container mt-2">
+                               <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
+                              <p class="card-text datepub">Publié le 23/12/2012</p>
+                             
+                            </div>
+                          </div>
+                        <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
+                            <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
+                            <div class="container mt-2">
+                               <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
+                              <p class="card-text datepub">Publié le 23/12/2012</p>
+                             
+                            </div>
+                          </div>
+                        
+                      
+
+                    </div>
+                    <div class="pagination">
+                     
                     </div>
                 </div>
                 </div>
+                
             </div>
         </div>
         <!-- main-panel ends -->
+        
+
     </div>
     <!-- page-body-wrapper ends -->
+    
 </div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Ajouter projet
-  </button>
+
 
   <img src="{{image}}" alt="">
+  
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -377,7 +288,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Image du projet</label>
-                    <input class="form-control" name="image" type="file" id="formFile" (change)="uploadFile($event)" [(ngModel)]="image">
+                    <input class="form-control" name="image" type="file" id="formFile"  [(ngModel)]="image">
                   </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description du projet</label>
