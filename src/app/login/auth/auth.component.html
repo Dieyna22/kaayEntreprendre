@@ -1,1 +1,136 @@
-<p>auth works!</p>
+<div id="main-wrapper" class="container mt-5">
+    <div class="row justify-content-center ">
+        <div class="col-xl-10 ">
+            <div class="card shadow containerCard" *ngIf="choixFormulaire">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                            </div>  
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h1>LOGO</h1>
+                                    <!-- <img src="../../assets/logo.png" style="width: 45%; height: 15%; text-align: center; margin: 0 auto;"> -->
+                                </div>
+                            
+                                <h6 class="h5 mb-3">Connexion</h6>
+                            
+                            
+                                <form (submit)="submitFunction($event)">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="emailLogin">
+                                    </div>
+                                    <div class="form-group mb-5">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="passwordLogin">
+                                        <p class="register" (click)="afficherFormulaire()"><a class="bg">Vous n'avez-pas de compte.<span class="clr">Inscrivez-vous</span></a></p>
+                                    </div>
+                                    <button type="submit" class="btn btn-theme" (click)="connexion()">Se connecter</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card-body -->
+            </div>
+            <div class="card shadow containerCard" *ngIf="!choixFormulaire">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" *ngIf="showSteps" >
+                            <div class="p-5">
+                                <div class="mb-2">
+                                    <h1>LOGO</h1>
+                                    <!-- <img src="../../assets/logo.png" style="width: 45%; height: 15%; text-align: center; margin: 0 auto;"> -->
+                                </div>
+            
+                                <form (submit)="submitFunction($event)">
+                                    <div class="row">
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="prenom" class="form-label">Prénom</label>
+                                            <input type="text" class="form-control" id="prenom" name=prenom>
+                                        </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="nom" class="form-label">Nom</label>
+                                            <input type="text" class="form-control" id="nom" name="nom">
+                                        </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="example" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="example" name="email">
+                                        </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="password" class="form-label">Mot de passe</label>
+                                            <input type="password" class="form-control" id="password" name="password">
+                                        </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="telephone" class="form-label">Téléphone</label>
+                                            <input type="tel" class="form-control" id="telephone" name="telephone">
+                                        </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="exampleFormControlInput1" class="form-label">Entrepreneur</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1" (click)="showComponant('experimente')">
+                                                <label class="form-check-label" for="flexRadioDefault1" name="experimente">
+                                                    Experimenté
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2" (click)="showComponant('novice')">
+                                                <label class="form-check-label" for="flexRadioDefault2" name="novice">
+                                                    Novice
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-theme" (click)="afficherFormulaire()" id="novice"
+                                        *ngIf="currentContent === 'novice'">S'inscrire</button>
+                                    <button class="btn btn-theme" (click)="afficherStep()" id="experimente"
+                                        *ngIf="currentContent === 'experimente'">Suivant</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" *ngIf="!showSteps">
+                            <div class="p-5">
+                                <div class="mb-2">
+                                    <h1>LOGO</h1>
+                                    <!-- <img src="../../assets/logo.png" style="width: 45%; height: 15%; text-align: center; margin: 0 auto;"> -->
+                                </div>
+                    
+
+                                <form (submit)="submitFunction($event)">
+                                    <div class="row">
+                                        <label for="floatingTextarea2" class="form-label">Réalisation</label>
+                                        <div class="form-floating md-3 mb-2 col-lg-12">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                                style="height: 90px;"></textarea>
+                                        </div>
+                                        <label for="floatingTextarea2" class="form-label">Experience</label>
+                                        <div class="form-floating md-3 col-lg-12">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                                style="height: 90px; "></textarea>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-theme mt-2 mb-3" (click)="afficherFormulaire()" >S'inscrire</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card-body -->
+            </div>
+
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>
