@@ -1,0 +1,16 @@
+.paginattion{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+.bi-chevron-left{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.bi-chevron-right{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

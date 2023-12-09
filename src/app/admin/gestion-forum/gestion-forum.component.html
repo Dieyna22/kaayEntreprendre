@@ -1,1 +1,141 @@
-<p>gestion-forum works!</p>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion Forum</title>
+  <link href="https://assets.codepen.io/344846/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./gestion-forum.component.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+  <div class="bg-white dark:bg-gray-900 dark:border-gray-800 w-20 flex-shrink-0 border-r border-gray-200 flex-col hidden sm:flex">
+  </div>
+  <div class="flex-grow overflow-hidden h-full flex flex-col">
+    <div class="flex-grow flex overflow-x-hidden">
+      <div class="flex-grow bg-white dark:bg-gray-900 overflow-y-auto">
+        <div class="sm:p-7 p-4">
+          <div class="flex w-full items-center mb-7">
+            <div class="ml-auto text-gray-500 text-xs sm:inline-flex hidden items-center">
+            </div>
+          </div>
+          <table class="w-full text-left">
+            <thead>
+              <tr class="text-gray-400">
+                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Type</th>
+                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Nom</th>
+                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800 hidden md:table-cell">Titre</th>
+                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Description</th>
+                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600 dark:text-gray-100">
+              <tr>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    
+                    La technologie
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    TechTalk Central
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Dévéloppement web</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                    <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    La technologie
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    TechTalk
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                    <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                  La technologie
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    TechTalk
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                    <button class="w-8 h-8 inline-flex items-center justify-center text-gray-400 ml-auto">
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    La technologie
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    TechTalk
+                  </div>
+                </td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Développement web</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">Lorem</td>
+                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                  <div class="flex items-center">
+                    <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paginattion mt-5">
+            <i class="bi bi-chevron-left mt-1"></i>
+            <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border leading-none mx-1">1</button>
+            <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 dark:text-white leading-none mx-1">2</button>
+            <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none ">3</button>
+            <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border leading-none mx-1">4</button>
+            <i class="bi bi-chevron-right mt-1"></i>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+</body>
+</html>
