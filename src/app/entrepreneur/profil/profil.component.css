@@ -5,6 +5,9 @@ input, textarea{
     background-color: #60b8c4;
     color: white;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
 }
 .btnClose{
     outline: 1px solid #60b8c4;
@@ -14,28 +17,18 @@ input, textarea{
 .logo{
     height: 200px;
 }
+.imageProfil{
+    width: 100px;
+    height: 100px;
+    margin-top: 15% ;
+    border-radius: 20px;
+    margin-left: 45%;
+}
 
-#boutontogg{
-    margin-left: 16%;
-}
-.container .mesCartes{
-    margin: 0 auto;
-}
-#carteProjet{
-    height: 45vh;
-    border-radius: 0;
-    padding: 0;
-    margin: o;
-}
-.consulter{
-    font-size: 12px;
-}
-.titre{
-    font-size: 16px;
-}
-.datepub{
-    margin-top: -7%;
-}
+
+
+
+
 .isactive{
     background-color: white;
     color: #60b8c4 !important;
@@ -55,18 +48,13 @@ input, textarea{
   width: 130px;
 
 }
-.image{
-    border-top-right-radius:50px ;
-    border-bottom-left-radius:50px ;   
-}
+
 .menuside{
     font-size: 17px !important;
 }
-@media (max-width:565px){
-    .mesCartes .card{
-        width: 100% !important;
-        height: 500px;
+@media (max-width:500px){
+    .bottomcontainnerProfil{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
     }
 }
-
-
