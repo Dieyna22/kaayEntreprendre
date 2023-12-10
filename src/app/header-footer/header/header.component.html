@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg  shadow-sm mb-1 fixed-top" id="navbar">
-    <div class="container-fluid">
+    <div class="container">
        <img src="" alt="logo" width="100px" height="68px">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,15 +10,15 @@
             <a class="nav-link current">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Guide</a>
+            <a class="nav-link" [routerLink]="['/guide']">Guide</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Ressource</a>
+            <a class="nav-link" [routerLink]="['/ressource']">Ressource</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['/forum']">
             <a class="nav-link" >Forum</a>
         </li>
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['/etudeCas']">
             <a class="nav-link" >Etude de cas</a>
         </li>
         
