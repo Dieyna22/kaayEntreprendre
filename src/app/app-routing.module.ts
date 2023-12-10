@@ -57,12 +57,6 @@ const routes: Routes = [
   { path: 'detailsCas', component: DetailCasComponent },
   { path: 'evenement', component: EvenementComponent },
   { path: 'detailsEvenement', component: DetailEvenComponent },
-
-
-
-
-
-
 ];
 
 @NgModule({

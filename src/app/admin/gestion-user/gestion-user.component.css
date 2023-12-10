@@ -1,0 +1,68 @@
+input, textarea{
+    border-bottom: 2px solid #60b8c4;
+}
+.btnAjout{
+    background-color: #60b8c4;
+    color: white;
+    font-weight: bold;
+}
+.btnClose{
+    outline: 1px solid #60b8c4;
+    color: #60b8c4;
+    font-weight: bold;
+}
+.logo{
+    height: 200px;
+}
+
+#boutontogg{
+    margin-left: 16%;
+}
+.container .mesCartes{
+    margin: 0 auto;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+    grid-gap: 6px !important;
+}
+#carteProjet{
+    height: 40vh;
+    width: 48% !important;
+    border-radius: 0;
+    border-top-right-radius:50px ;
+    border-bottom-left-radius:50px ;   
+}
+.consulter{
+    font-size: 16px;
+    float: right;
+}
+.titre{
+    font-size: 16px;
+}
+
+.isactive{
+    background-color: white;
+    color: #60b8c4 !important;
+    border-top-right-radius:50px ;
+    border-bottom-right-radius:50px ;
+    width: 92%;
+}
+.navbar{
+    margin-left: 15%;
+    background-color: #60b8c4;
+}
+
+.navbar-brand-wrapper{
+    background-color: #60b8c4;
+  border: 5px solid #60b8c4;
+  margin-left: -17.5%;
+  width: 130px;
+
+}
+
+.menuside{
+    font-size: 17px !important;
+}
+.mt-5{
+    display: flex;
+    justify-content: center;
+}
