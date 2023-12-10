@@ -15,7 +15,6 @@ import { GestionForumComponent } from './admin/gestion-forum/gestion-forum.compo
 import { AccueilAdminComponent } from './admin/accueil-admin/accueil-admin.component';
 import { AccueilUserComponent } from './user/accueil-user/accueil-user.component';
 import { GuideComponent } from './user/guide/guide.component';
-import { RessourceComponent } from './user/ressource/ressource.component';
 import { ForumComponent } from './user/forum/forum.component';
 import { EtudeCasComponent } from './user/etude-cas/etude-cas.component';
 import { EvenementComponent } from './user/evenement/evenement.component';
@@ -28,12 +27,14 @@ import { DetailProjetComponent } from './entrepreneur/detail-projet/detail-proje
 import { ExperienceComponent } from './entrepreneur/experience/experience.component';
 import { DetailExperienceComponent } from './entrepreneur/detail-experience/detail-experience.component';
 import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail-ressource.component';
+import { DetailGuideComponent } from './user/detail-guide/detail-guide.component';
+import { DetailEvenComponent } from './user/detail-even/detail-even.component';
+import { DetailCasComponent } from './user/detail-cas/detail-cas.component';
+import { UserRessourceComponent } from './user/user-ressource/user-ressource.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-
     GestionGuideComponent,
     GestionEvenementComponent,
     GestionCommentaireComponent,
@@ -44,7 +45,6 @@ import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail
     AccueilAdminComponent,
     AccueilUserComponent,
     GuideComponent,
-    RessourceComponent,
     ForumComponent,
     EtudeCasComponent,
     EvenementComponent,
@@ -57,6 +57,10 @@ import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail
     ExperienceComponent,
     DetailExperienceComponent,
     DetailRessourceComponent,
+    DetailGuideComponent,
+    DetailEvenComponent,
+    DetailCasComponent,
+    UserRessourceComponent,
   ],
   imports: [
     BrowserModule,

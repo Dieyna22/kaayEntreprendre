@@ -1,0 +1,69 @@
+.container .mesCartes {
+    margin: 0 auto;
+}
+
+#carteProjet {
+    height: 40vh;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.btnClose {
+    outline: 1px solid #60b8c4;
+    color: #60b8c4;
+    font-weight: bold;
+}
+.consulter {
+    font-size: 16px;
+    float: right;
+}
+.cartes{
+    display: flex;
+}
+.even{
+    background-color: #F6F6F6;
+    width: 300vh;
+    padding: 20px;
+    height: 75%;
+}
+.cardEven{
+    display: flex;
+    margin-bottom: 5px;
+}
+.cardEven img {
+   margin-right: 15px;
+}
+
+.pagination {
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.pagination ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #222;
+}
+
+/* ONE */
+
+.p1 a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+}
+
+.p1 a.is-active {
+    background-color: #60B8C4;
+    border-radius: 100%;
+    color: #fff;
+}
+
