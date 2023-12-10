@@ -17,7 +17,7 @@ export class RessourceService {
 
   // Méthode pour ajouter un ressource
   postRessource(ressource: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}`, ressource);
+    return this.http.post<any>(`http://127.0.0.1:8000/api/ajouter-ressource`, ressource);
   }
 
   // Méthode pour supprimer un ressource
