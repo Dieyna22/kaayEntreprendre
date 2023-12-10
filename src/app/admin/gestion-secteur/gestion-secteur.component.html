@@ -47,23 +47,23 @@
             </a>
            
         </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link" >
-                <span class="menu-icon">
-                    <i class="bi bi-chat-left-fill text-white"></i>
-                </span>
-                <span class="menu-title fw-bold menuside">Gestion Secteur</span>
-              
-            </a>
-           
-        </li>
         <li class="nav-item menu-items isactive">
             <a class="nav-link" >
                 <span class="menu-icon p-2">
                     <i class="bi bi-collection-fill text-white"></i>
                 </span>
-                <span class="menu-title menuside" style="color: #60b8c4; font-weight: bold;">Gestion Commentair</span>
+                <span class="menu-title menuside" style="color: #60b8c4; font-weight: bold;">Gestion Secteur</span>
              
+            </a>
+           
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" >
+                <span class="menu-icon">
+                    <i class="bi bi-chat-left-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Commentaire</span>
+              
             </a>
            
         </li>
@@ -246,7 +246,24 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+            
+            <div class="mesCartes row  gap-3" style="margin-left: 1%;">
+                <div class="card col-md-5"  id="carteProjet">
+                    
+                    <div class="container mt-2">
+                       <p class="d-flex justify-content-between mt-md-0">
+                        <span class="fw-bold fs-5 text-center titre">Ajouter Secteur</span>  </p> 
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled>
+                            <label for="floatingInputDisabled" >ajoute Secteur</label>
+                          </div>
+                       <button class="btn btnClose  Ajouter">Ajouter</button>
+                    </div>
+                  </div>
+             </div>
+
+
+            <div class=" card bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden tout" style="margin-left: 53%; margin-top: -26%; ">
                 <div class="bg-white dark:bg-gray-900 dark:border-gray-800 w-20 flex-shrink-0 border-r border-gray-200 flex-col hidden sm:flex">
                 </div>
                 <div class="flex-grow overflow-hidden h-full flex flex-col">
@@ -257,11 +274,13 @@
                           <div class="ml-auto text-gray-500 text-xs sm:inline-flex hidden items-center">
                           </div>
                         </div>
-                        <table class="w-50 text-left">
-                          <thead class="shadow-sm p-3 mb-3 bg-body-white rounded">
+                        <table class="w-100 text-left">
+                          <thead class="shadow-sm p-3  bg-body-white rounded">
                             <tr class="text-gray-400">
                               <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Nom Secteurs</th>
-                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Action</th>
+                             <div class="action">
+                                <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Action</th>
+                             </div>
                             </tr>
                           </thead>
                           <tbody class="text-gray-600 dark:text-gray-100">
@@ -269,20 +288,13 @@
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
                                   
-                                  La technologie
+                                  Mobile
                                 </div>
                               </td>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  TechTalk Central
-                                </div>
-                              </td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Dévéloppement web</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
-                                <div class="flex items-center">
-                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
-                                  <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                  <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn" type="button" style="border: 1px solid #60B8C4;">Annuler</button>
                                  
                                 </div>
                               </td>
@@ -290,40 +302,40 @@
                             <tr>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  La technologie
+                                  Electroménager
                                 </div>
                               </td>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  TechTalk
-                                </div>
-                              </td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
-                                <div class="flex items-center">
-                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
                                   <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
                                   
                                 </div>
                               </td>
                             </tr>
                             <tr>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    Electroménager
+                                  </div>
+                                </td>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                            <tr>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                La technologie
+                                Mobile
                                 </div>
                               </td>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  TechTalk
-                                </div>
-                              </td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
-                                <div class="flex items-center">
-                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
                                   <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
                                 </div>
                               </td>
@@ -331,23 +343,56 @@
                             <tr>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  La technologie
+                                  Electroménager
                                 </div>
                               </td>
                               <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
                                 <div class="flex items-center">
-                                  TechTalk
-                                </div>
-                              </td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Développement web</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">Lorem</td>
-                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
-                                <div class="flex items-center">
-                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
                                   <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    Electroménager
+                                  </div>
+                                </td>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    Electroménager
+                                  </div>
+                                </td>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                  </div>
+                                </td>
+                              </tr>
+                            <tr>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    Electroménager
+                                  </div>
+                                </td>
+                                <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                  <div class="flex items-center">
+                                    <button class="btn  me-md-2 mx-5" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                    <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
                             <tr>
                             </tr>
                           </tbody>
@@ -366,6 +411,21 @@
                   </div>
                 </div>
               </div>
+
+
+
+              <!-- modal -->
+              <div class="mesCartes row  gap-3" style="margin-left: 10%; margin-top: -15%;">
+                <div class="card col-md-5"  id="carteProjets">
+                    
+                    <div class="container mt-2">
+                       <p class="d-flex justify-content-between mt-md-0">
+                        <span class="fw-bold fs-5 mt-4 titre">Total Secteur</span>  </p> 
+                        <h2 class="mx-5">30 <i class="bi bi-table" style="color: #60B8C4;"></i>
+                        </h2>
+                    </div>
+                  </div>
+             </div>
              </div>
              
     </div>

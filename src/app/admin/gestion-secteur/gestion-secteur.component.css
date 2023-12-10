@@ -66,6 +66,25 @@ input, textarea{
     display: flex;
     justify-content: center;
 }
+.action{
+    margin-left: 100px;
+}
+.Ajouter{
+    margin-top: 70px;
+    margin-left: 230px;
+}
+/* .tout{
+   
+   box-shadow:  0 0.2rem 0.2rem; 
+   
+} */
+#carteProjets{
+    height: 30vh;
+    width: 35% !important;
+    border-radius: 0;
+    border-top-left-radius:50px ;
+    border-bottom-right-radius:50px ;   
+}
 
 
 

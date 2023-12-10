@@ -22,7 +22,7 @@ import { EtudeCasComponent } from './user/etude-cas/etude-cas.component';
 import { EvenementComponent } from './user/evenement/evenement.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'accueilUser', pathMatch: 'full' },
   { path: 'login', component: AuthComponent },
 
   { path: 'accueilAdmin', component: AccueilAdminComponent },
