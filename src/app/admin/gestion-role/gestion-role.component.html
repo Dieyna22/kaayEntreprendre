@@ -1,3 +1,4 @@
+
 <div class="container-scroller">
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas " id="sidebar">
@@ -22,7 +23,7 @@
                     <span class="menu-icon">
                         <i class="bi bi-house-door-fill text-white"></i>
                     </span>
-                    <span class="menu-title menuside fw-bold">Gestion Utilisateurs</span>
+                    <span class="menu-title menuside fw-bold">Accueil</span>
                 </a>
             </li>
             <li class="nav-item menu-items isactive">
@@ -31,7 +32,7 @@
                     <span class="menu-icon">
                         <i class="bi bi-person-fill text-white"></i>
                     </span>
-                    <span class="menu-title isactive menuside fw-bold">Gestion Forum</span>
+                    <span class="menu-title isactive menuside fw-bold">Gestion projets</span>
                   
                 </a>
              
@@ -41,27 +42,7 @@
                     <span class="menu-icon">
                         <i class="bi bi-collection-fill text-white"></i>
                     </span>
-                    <span class="menu-title menuside fw-bold">Gestion Secteur</span>
-                 
-                </a>
-               
-            </li>
-            <li class="nav-item menu-items">
-                <a class="nav-link" [routerLink]="['/ressourceEntrepreneur']">
-                    <span class="menu-icon">
-                        <i class="bi bi-collection-fill text-white"></i>
-                    </span>
-                    <span class="menu-title menuside fw-bold">Gestion Commentaires</span>
-                 
-                </a>
-               
-            </li>
-            <li class="nav-item menu-items">
-                <a class="nav-link" [routerLink]="['/ressourceEntrepreneur']">
-                    <span class="menu-icon">
-                        <i class="bi bi-collection-fill text-white"></i>
-                    </span>
-                    <span class="menu-title menuside fw-bold">Gestion Guides</span>
+                    <span class="menu-title menuside fw-bold">Gestion Ressources</span>
                  
                 </a>
                
@@ -71,7 +52,7 @@
                     <span class="menu-icon">
                         <i class="bi bi-chat-left-fill text-white"></i>
                     </span>
-                    <span class="menu-title menuside fw-bold">Gestion Rôles</span>
+                    <span class="menu-title menuside fw-bold">Forum</span>
                   
                 </a>
                
@@ -182,7 +163,60 @@
             </div>
         </nav>
         <!-- partial -->
+       <div class="cartel d-flex" style=" width: 100%; justify-content: space-between; margin-top: 5%; height: 50%;">
+        <div class="card col-md-5"  id="carteProjet">
+                        
+            <div class="container mt-5" style=" width: 50%;">
+               <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Ajout Rôle</span>  </p> 
+               <input type="text" placeholder="ajouter" style="border: 1px solid #60B8C4; background-color: white;color: #60B8C4; border-radius: 10px;">
+               
+               <button class="btn btnClose mt-5 consulter" style="border: 1px solid #60B8C4;">Suite</button>
+            </div>
+          </div>
+          <table class="table table-hover table-nowrap"  style="width: 38%; height: 20px; margin-right: 10%; ">
+            <thead class="table-light" style="border: 1px solid #60B8C4; ">
+              <tr>
+                <th scope="col" style="color: black; ">Domaine</th>
+                <th scope="col "style="color: black;; " >Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Marie Dupont</td>
+                 <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+                  <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
+                
+                </div>
+    
+                </td>
+              </tr>
+              
+              <tr>
+                <td>Marie Dupont</td>
+             <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+              <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
+            
+            </div>
+
+            </td>
+          </tr>
+          <tr style="color: black;  ">
+            <td >Marie Dupont</td>
+         <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+          <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
         
+        </div>
+
+        </td>
+      </tr>
+              </tbody>
+            </table>
+       </div>
+       
+       
         <!-- main-panel ends -->
         
   
@@ -192,38 +226,17 @@
   </div>
   
   
-  <img src="" alt="">
   
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Ajout projet</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Titre projet</label>
-                  <input type="text" name="titre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Image du projet</label>
-                    <input class="form-control" name="image" type="file" id="formFile" ="image">
-                  </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description du projet</label>
-                  </div>
-              
-              </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btnAjout" data-bs-dismiss="modal" >Ajouter</button>
-          <button type="button" class=" btn btnClose" data-bs-dismiss="modal">Annuler</button>
-        </div>
-      </div>
+  <div class="card col-md-5 mb-3 h-8"  id="carteProjet" style="margin-left: 20%;height: 150px; margin-top: -19%;width: 350px; background-color: #60B8C4;">
+                        
+    <div class="container mt-5" style="border: 1px solid #60B8C4; width: 50%;">
+       <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre " style="color: white;">Total Role</span>  </p> 
+       
+       
+       
     </div>
   </div>
+  
   
