@@ -47,12 +47,6 @@ const routes: Routes = [
   { path: 'forum', component: ForumComponent },
   { path: 'etudeCas', component: EtudeCasComponent },
   { path: 'evenement', component: EvenementComponent },
-
-
-
-
-
-
 ];
 
 @NgModule({

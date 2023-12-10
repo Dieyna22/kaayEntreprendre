@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-accueil-entrepreneur',
@@ -10,8 +11,13 @@ export class AccueilEntrepreneurComponent implements OnInit{
   titre:string='';
   image:string='';
   description:string='';
+  searchResult: any[] = [];
 
-  selectedImage!: File;
+  pageActuelle: number = 1;
+  articlesParPage: number = 3;
+
+
+  constructor(private route:Router){}
 
   ngOnInit(){
   }
@@ -19,28 +25,27 @@ export class AccueilEntrepreneurComponent implements OnInit{
     console.log(this.titre)
     console.log(this.image)
     console.log(this.description)
-    this.onUpload();
+  
   }
-  onFileSelected(event:any) {
-    this.selectedImage = event.target.files[0];
+ 
+  
+
+
+  // Méthode pour déterminer les articles à afficher sur la page actuelle
+  getArticlesPage(): any[] {
+    const indexDebut = (this.pageActuelle - 1) * this.articlesParPage;
+    const indexFin = indexDebut + this.articlesParPage;
+    return this.searchResult.reverse().slice(indexDebut, indexFin);
+  }
+  // Méthode pour générer la liste des pages
+  get pages(): number[] {
+    const totalPages = Math.ceil(this.searchResult.length / this.articlesParPage);
+    return Array(totalPages).fill(0).map((_, index) => index + 1);
   }
 
-  onUpload() {
-    if (this.selectedImage) {
-     console.log(this.image)
-    }
+  // Méthode pour obtenir le nombre total de pages
+  get totalPages(): number {
+    return Math.ceil(this.searchResult.length / this.articlesParPage);
   }
-  uploadFile(event: Event) {
-      const element = event.currentTarget as HTMLInputElement;
-      let fileList: FileList | null = element.files;
-      if (fileList) {
-        const selectedFile = fileList[0];
-        if (selectedFile) {
-          if (selectedFile.type.match('image.*')) {
-              this.image = URL.createObjectURL(selectedFile);
-          } 
-        }
-      }
-    }
   
 }
