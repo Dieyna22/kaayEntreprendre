@@ -1,1 +1,242 @@
-<p>gestion-role works!</p>
+
+<div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas " id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center fixed-top ">
+           
+        </div>
+        <ul class="nav">
+            <li class="nav-item nav-category">
+                <span class="nav-link mb-5 ">   <img src="" alt="logo" class=""></span>
+             
+            </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" >
+                    <span class="menu-icon">
+                        <i class="mdi mdi-speedometer text-white"></i>
+                    </span>
+                    <span class="menu-title menuside fw-bold " >Tableau de bord</span>
+                </a>
+            </li>
+            <li class="nav-item menu-items">
+                <a  class="nav-link " [routerLink]="['/accueilUser']">
+                    <span class="menu-icon">
+                        <i class="bi bi-house-door-fill text-white"></i>
+                    </span>
+                    <span class="menu-title menuside fw-bold">Accueil</span>
+                </a>
+            </li>
+            <li class="nav-item menu-items isactive">
+                <a class="nav-link " data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <span class="menu-icon">
+                        <i class="bi bi-person-fill text-white"></i>
+                    </span>
+                    <span class="menu-title isactive menuside fw-bold">Gestion projets</span>
+                  
+                </a>
+             
+            </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" [routerLink]="['/ressourceEntrepreneur']">
+                    <span class="menu-icon">
+                        <i class="bi bi-collection-fill text-white"></i>
+                    </span>
+                    <span class="menu-title menuside fw-bold">Gestion Ressources</span>
+                 
+                </a>
+               
+            </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" [routerLink]="['/forum']">
+                    <span class="menu-icon">
+                        <i class="bi bi-chat-left-fill text-white"></i>
+                    </span>
+                    <span class="menu-title menuside fw-bold">Forum</span>
+                  
+                </a>
+               
+            </li>
+        
+  
+        </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row ">
+            <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center 
+            ">
+                <a class="navbar-brand brand-logo-mini" href="index.html"></a>
+            </div>
+            <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+               
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item w-100 d-flex justify-content-end">
+                        <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex   search " id="search">
+                            <input type="text" class="form-control d-flex justify-content-end" placeholder="Rechercher">
+                        </form>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown border-left">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                            data-toggle="dropdown">
+                            <i class="mdi mdi-bell"></i>
+                            <span class="count bg-danger"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="notificationDropdown">
+                            <h6 class="p-3 mb-0">Notifications</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-calendar text-success"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Event today</p>
+                                    <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event
+                                        today </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-settings text-danger"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Settings</p>
+                                    <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-link-variant text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Launch Admin</p>
+                                    <p class="text-muted ellipsis mb-0"> New admin wow! </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <p class="p-3 mb-0 text-center">See all notifications</p>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                            <div class="navbar-profile">
+                                <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                                <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                                <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="profileDropdown">
+                            <h6 class="p-3 mb-0">Profil</h6>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-logout text-danger"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">Se deconnecter</p>
+                                </div>
+                            </a>
+  
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="mdi mdi-format-line-spacing"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+       <div class="cartel d-flex" style=" width: 100%; justify-content: space-between; margin-top: 5%; height: 50%;">
+        <div class="card col-md-5"  id="carteProjet">
+                        
+            <div class="container mt-5" style=" width: 50%;">
+               <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Ajout Rôle</span>  </p> 
+               <input type="text" placeholder="ajouter" style="border: 1px solid #60B8C4; background-color: white;color: #60B8C4; border-radius: 10px;">
+               
+               <button class="btn btnClose mt-5 consulter" style="border: 1px solid #60B8C4;">Suite</button>
+            </div>
+          </div>
+          <table class="table table-hover table-nowrap"  style="width: 38%; height: 20px; margin-right: 10%; ">
+            <thead class="table-light" style="border: 1px solid #60B8C4; ">
+              <tr>
+                <th scope="col" style="color: black; ">Domaine</th>
+                <th scope="col "style="color: black;; " >Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Marie Dupont</td>
+                 <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+                  <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
+                
+                </div>
+    
+                </td>
+              </tr>
+              
+              <tr>
+                <td>Marie Dupont</td>
+             <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+              <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
+            
+            </div>
+
+            </td>
+          </tr>
+          <tr style="color: black;  ">
+            <td >Marie Dupont</td>
+         <td> <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary me-md-2" type="button" style="background-color:#60B8C4">Reporter</button>
+          <button class="btn btn-primary" type="button" style="border: 1px solid #60B8C4;background-color: white;color: #60B8C4;">Annuler</button>
+        
+        </div>
+
+        </td>
+      </tr>
+              </tbody>
+            </table>
+       </div>
+       
+       
+        <!-- main-panel ends -->
+        
+  
+    </div>
+    <!-- page-body-wrapper ends -->
+    
+  </div>
+  
+  
+  
+  
+  <!-- Modal -->
+  <div class="card col-md-5 mb-3 h-8"  id="carteProjet" style="margin-left: 20%;height: 150px; margin-top: -19%;width: 350px; background-color: #60B8C4;">
+                        
+    <div class="container mt-5" style="border: 1px solid #60B8C4; width: 50%;">
+       <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre " style="color: white;">Total Role</span>  </p> 
+       
+       
+       
+    </div>
+  </div>
+  
+  
