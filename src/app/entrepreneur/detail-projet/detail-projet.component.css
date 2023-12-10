@@ -77,8 +77,10 @@ input, textarea{
 /* media queries */
 @media (max-width:730px){
     .containerdetail {
-        display: grid;
-        grid-template-columns: 1fr;
+        border: 1px solid red;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
     }
+
 }
 
