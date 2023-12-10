@@ -20,6 +20,7 @@ import { GuideComponent } from './user/guide/guide.component';
 import { ForumComponent } from './user/forum/forum.component';
 import { EtudeCasComponent } from './user/etude-cas/etude-cas.component';
 import { EvenementComponent } from './user/evenement/evenement.component';
+import { ProfilComponent } from './entrepreneur/profil/profil.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'detailsRessource', component: DetailRessourceComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'ressourceEntrepreneur', component: RessourceComponent },
+  {path:  'profil', component:ProfilComponent},
 
   { path: 'accueilUser', component: AccueilUserComponent },
   { path: 'guide', component: GuideComponent },

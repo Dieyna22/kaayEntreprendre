@@ -28,6 +28,7 @@ import { DetailProjetComponent } from './entrepreneur/detail-projet/detail-proje
 import { ExperienceComponent } from './entrepreneur/experience/experience.component';
 import { DetailExperienceComponent } from './entrepreneur/detail-experience/detail-experience.component';
 import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail-ressource.component';
+import { ProfilComponent } from './entrepreneur/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -57,13 +58,14 @@ import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail
     ExperienceComponent,
     DetailExperienceComponent,
     DetailRessourceComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

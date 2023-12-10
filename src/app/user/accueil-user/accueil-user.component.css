@@ -1,0 +1,133 @@
+*{
+  list-style: none;
+}
+ 
+.contenBanniere{
+    margin-top: 5%;
+    background-color:#60b8c4 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 85vh;
+    padding-top: 5%;
+  }
+  #polygone{
+    width: 400px;
+    height: 350px;
+    position: relative;
+    top: 4%;
+    left: 5%;
+
+  }
+  .titre{
+    font-size: 70px;
+  }
+  
+  .soft{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: -60px;
+  }
+.soft .skill{
+  border-radius: 0;
+  height: 220px;
+}
+.isactive{
+  background-color: #60b8c4;
+  color: white;
+}
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+
+}
+.perform{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20%;
+}
+.perform li i {
+  color: #60b8c4;
+}
+.bottom{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 8%;
+}
+.stat{
+  color: #60b8c4;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.desc{
+  line-height: 25px;
+}
+.modele{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+}
+.modele .card{
+  border-radius: 0;
+
+
+}
+.modele .card i{
+  font-size: 30px;
+  color: #60b8c4;
+  
+}
+.title{
+  font-size:18px
+}
+.btnAjout{
+  background-color: #60b8c4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+}
+.event{
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.eventleft{
+  margin-top: 25%;
+}
+#image1 {
+  width: 350px;
+  height: 250px;
+  position: relative;
+  left: 38%;
+}
+#image2{
+  width: 350px;
+  height: 250px;
+  position: relative;
+  top:-20%;
+  left:22%
+}
+#image3{
+  width: 350px;
+  height: 250px;
+  position: relative;
+  left: 38%; 
+  top:-30%;
+}
+.botem{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+}
+.botem .card{
+  border-radius: 0;
+}
+#rounded{
+  border-radius: 100%;
+  width: 70px;
+  height:70px;
+}

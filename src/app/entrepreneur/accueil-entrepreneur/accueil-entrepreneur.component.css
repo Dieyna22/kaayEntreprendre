@@ -58,6 +58,18 @@ input, textarea{
 .menuside{
     font-size: 17px !important;
 }
+@media (max-width:565px){
+    .mesCartes .card{
+        width: 100% !important;
+        height: 500px !important;
+    }
+}
+@media (min-width: 567px) and (max-width:755px){
+    .mesCartes{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 
 

@@ -1,0 +1,61 @@
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #1b1717;
+    color: white;
+    margin-top: 250px;
+}
+
+.Container_Footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.footer_Menu{
+    padding-top: 2%;
+}
+.reseau{
+    margin-left: -32px;
+}
+
+.Copyright{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #1b1717;
+}
+
+@media screen and (max-width:950px) {
+    .Container_Footer{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.Container_Footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer_Menu a:hover{
+    color: darkorange;
+}
+/* Fin Section Footer */
+
+/* Debut Menu SideBar */
+#MenuSec{
+    position: absolute;
+    left: -250px;
+    z-index: 5;
+
+}
+
+#X_Bar{
+    display: none;
+    margin-left: 30px;
+    margin-top: 50px;
+}
