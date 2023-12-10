@@ -167,7 +167,7 @@
         </div>
         <h3 class="mt-5 text-center">InnovHun</h3>
         <div class="bouton">
-            <button class="btnAjout me-2">Modifier</button>
+            <button class="btnAjout me-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Modifier</button>
             <button class="btnClose ">Archiver</button>
         </div>
     </div>
@@ -181,4 +181,35 @@
     </div>
 </div>
 
-
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier projet</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Titre projet</label>
+                  <input type="text" name="titre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Image du projet</label>
+                    <input class="form-control" name="image" type="file" id="formFile" >
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description du projet</label>
+                    <textarea class="form-control"  name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+              
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btnAjout" data-bs-dismiss="modal" >Ajouter</button>
+          <button type="button" class=" btn btnClose" data-bs-dismiss="modal">Annuler</button>
+        </div>
+      </div>
+    </div>
+  </div>

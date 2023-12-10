@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RessourceService {
 
-  apiUrl = 'http://127.0.0.1:8000';
+  apiUrl ='http://127.0.0.1:8000/ressources';
 
 
   constructor(private http: HttpClient) { }
@@ -23,5 +23,9 @@ export class RessourceService {
   // Méthode pour supprimer un ressource
   deleteRessource(ressourceId: any): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${ressourceId}`);
+  }
+
+  modifierRessource(id:any, ressource:any){
+    return this.http.put(`${this.apiUrl}/${id}`, ressource)
   }
 }
