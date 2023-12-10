@@ -27,6 +27,7 @@ import { DetailProjetComponent } from './entrepreneur/detail-projet/detail-proje
 import { ExperienceComponent } from './entrepreneur/experience/experience.component';
 import { DetailExperienceComponent } from './entrepreneur/detail-experience/detail-experience.component';
 import { DetailRessourceComponent } from './entrepreneur/detail-ressource/detail-ressource.component';
+import { ProfilComponent } from './entrepreneur/profil/profil.component';
 import { DetailGuideComponent } from './user/detail-guide/detail-guide.component';
 import { DetailEvenComponent } from './user/detail-even/detail-even.component';
 import { DetailCasComponent } from './user/detail-cas/detail-cas.component';
@@ -57,6 +58,7 @@ import { UserRessourceComponent } from './user/user-ressource/user-ressource.com
     ExperienceComponent,
     DetailExperienceComponent,
     DetailRessourceComponent,
+    ProfilComponent,
     DetailGuideComponent,
     DetailEvenComponent,
     DetailCasComponent,
@@ -67,7 +69,7 @@ import { UserRessourceComponent } from './user/user-ressource/user-ressource.com
     AppRoutingModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

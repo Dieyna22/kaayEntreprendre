@@ -20,10 +20,12 @@ import { GuideComponent } from './user/guide/guide.component';
 import { ForumComponent } from './user/forum/forum.component';
 import { EtudeCasComponent } from './user/etude-cas/etude-cas.component';
 import { EvenementComponent } from './user/evenement/evenement.component';
+import { ProfilComponent } from './entrepreneur/profil/profil.component';
 import { DetailGuideComponent } from './user/detail-guide/detail-guide.component';
 import { DetailEvenComponent } from './user/detail-even/detail-even.component';
 import { DetailCasComponent } from './user/detail-cas/detail-cas.component';
 import { UserRessourceComponent } from './user/user-ressource/user-ressource.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueilUser', pathMatch: 'full' },
@@ -44,6 +46,7 @@ const routes: Routes = [
   { path: 'detailsRessource', component: DetailRessourceComponent },
   { path: 'experience', component: ExperienceComponent },
   { path: 'ressourceEntrepreneur', component: RessourceComponent },
+  {path:  'profil', component:ProfilComponent},
 
   { path: 'accueilUser', component: AccueilUserComponent },
   { path: 'guide', component: GuideComponent },
