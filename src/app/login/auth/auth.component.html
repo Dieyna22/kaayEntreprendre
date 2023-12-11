@@ -29,7 +29,7 @@
                                         <input type="password" class="form-control" id="password" name="password" [(ngModel)]="passwordLogin">
                                         <p class="register" (click)="afficherFormulaire()"><a class="bg">Vous n'avez-pas de compte.<span class="clr">Inscrivez-vous</span></a></p>
                                     </div>
-                                    <button type="submit" class="btn btn-theme" (click)="connexion()">Se connecter</button>
+                                    <button type="submit" class="btn btn-theme" (click)=" signIn()">Se connecter</button>
                                 </form>
                             </div>
                         </div>
@@ -56,43 +56,48 @@
                                     <div class="row">
                                         <div class="mb-3 col-lg-6">
                                             <label for="prenom" class="form-label">Prénom</label>
-                                            <input type="text" class="form-control" id="prenom" name=prenom>
+                                            <input type="text" class="form-control" id="prenom" name=prenom [(ngModel)]="prenom">
                                         </div>
                                         <div class="mb-3 col-lg-6">
                                             <label for="nom" class="form-label">Nom</label>
-                                            <input type="text" class="form-control" id="nom" name="nom">
+                                            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="nom">
                                         </div>
                                         <div class="mb-3 col-lg-6">
                                             <label for="example" class="form-label">Email address</label>
-                                            <input type="email" class="form-control" id="example" name="email">
+                                            <input type="email" class="form-control" id="example" name="email" [(ngModel)]="email">
                                         </div>
                                         <div class="mb-3 col-lg-6">
                                             <label for="password" class="form-label">Mot de passe</label>
-                                            <input type="password" class="form-control" id="password" name="password">
+                                            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
                                         </div>
                                         <div class="mb-3 col-lg-6">
-                                            <label for="telephone" class="form-label">Téléphone</label>
-                                            <input type="tel" class="form-control" id="telephone" name="telephone">
+                                            <label for="adresse" class="form-label">Adresse</label>
+                                            <input type="text" class="form-control" id="adresse" name="adresse" [(ngModel)]="adresse">
                                         </div>
+                                        <div class="mb-3 col-lg-6">
+                                            <label for="region" class="form-label">Region</label>
+                                            <input type="text" class="form-control" id="region" name="region" [(ngModel)]="region">
+                                        </div>
+                                       
                                         <div class="mb-3 col-lg-6">
                                             <label for="exampleFormControlInput1" class="form-label">Entrepreneur</label>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1" (click)="showComponant('experimente')">
-                                                <label class="form-check-label" for="flexRadioDefault1" name="experimente">
+                                                    id="flexRadioDefault1" (click)="showComponant('experimente')" [(ngModel)]="statExp" >
+                                                <label class="form-check-label" for="flexRadioDefault1" name="experimente" style="color: black;">
                                                     Experimenté
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" (click)="showComponant('novice')">
-                                                <label class="form-check-label" for="flexRadioDefault2" name="novice">
+                                                <input class="form-check-input" type="radio" name="flexRadio"
+                                                    id="flexRadioDefault2" (click)="showComponant('novice')" [(ngModel)]="  statNov">
+                                                <label class="form-check-label" for="flexRadioDefault2" name="novice" style="color: black;">
                                                     Novice
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="btn btn-theme" (click)="afficherFormulaire()" id="novice"
+                                    <button class="btn btn-theme" (click)="afficherFormulaire(); signNovice()" id="novice"
                                         *ngIf="currentContent === 'novice'">S'inscrire</button>
                                     <button class="btn btn-theme" (click)="afficherStep()" id="experimente"
                                         *ngIf="currentContent === 'experimente'">Suivant</button>
@@ -108,19 +113,24 @@
                     
 
                                 <form (submit)="submitFunction($event)">
+                                    <div class="mb-3 col-lg-12">
+                                        <label for="">Activite</label>
+                                        <input type="text" name="activite" id="" [(ngModel)]="activite">
+                                    </div>
                                     <div class="row">
+                                        
                                         <label for="floatingTextarea2" class="form-label">Réalisation</label>
                                         <div class="form-floating md-3 mb-2 col-lg-12">
                                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                                style="height: 90px;"></textarea>
+                                                style="height: 90px;" name="realisation" [(ngModel)]="realisation"></textarea>
                                         </div>
                                         <label for="floatingTextarea2" class="form-label">Experience</label>
                                         <div class="form-floating md-3 col-lg-12">
                                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                                style="height: 90px; "></textarea>
+                                                style="height: 90px; " name="experience" [(ngModel)]="experience"></textarea>
                                         </div>
                                     </div>
-                                    <button class="btn btn-theme mt-2 mb-3" (click)="afficherFormulaire()" >S'inscrire</button>
+                                    <button class="btn btn-theme mt-2 mb-3" (click)="afficherFormulaire();signExperimente() " >S'inscrire</button>
                                 </form>
                             </div>
                         </div>
