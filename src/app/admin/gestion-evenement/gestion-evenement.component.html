@@ -1,14 +1,51 @@
-
+<!-- <p>gestion-commentaire works!</p> -->
 <div class="container-scroller">
-  <!-- partial:partials/_sidebar.html -->
-  <nav class="sidebar sidebar-offcanvas " id="sidebar" style="background-color: #60B8C4;">
-      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center fixed-top ">
+    <nav class="sidebar sidebar-offcanvas " id="sidebar"style="background-color: #60b8c4;">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center fixed-top "style="background-color: #60b8c4;">
+       
+    </div>
+    <ul class="nav">
+        <li class="nav-item nav-category">
+            <span class="nav-link mb-5 ">   <img src="" alt="logo" class=""></span>
          
-      </div>
-      <ul class="nav">
-          <li class="nav-item nav-category">
-              <span class="nav-link mb-5 ">   <img src="" alt="logo" class=""></span>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" [routerLink]="['/AcceuilAdmin']">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside" >Tableau de bord</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" [routerLink]="['/gestionUsers']">
+                <span class="menu-icon">
+                    <i class="bi bi-house-door-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside" >Gestion Utilisateur</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items ">
+            <a class="nav-link" [routerLink]="['/gestionForum']">
+                <span class="menu-icon">
+                    <i class="bi bi-person-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Forum</span>
+              
+            </a>
+
+         
+        </li>
+        <li class="nav-item menu-items isactive">
+            <a class="nav-link" [routerLink]="['/gestionEvenement']">
+                <span class="menu-icon p-2">
+                    <i class="bi bi-collection-fill text-white"></i>
+                </span>
+                <span class="menu-title menuside" style="color: #60b8c4; font-weight: bold;">Gestion Evenement</span>
+             
+            </a>
            
+
           </li>
           <li class="nav-item menu-items">
               <a class="nav-link" >
@@ -63,21 +100,52 @@
                     <i class="bi bi-chat-left-fill text-white"></i>
                 </span>
                 <span class="menu-title menuside fw-bold">Gestion Guides</span>
+
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" [routerLink]="['/gestionSecteur']">
+                <span class="menu-icon">
+                    <i class="bi bi-chat-left-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Secteur</span>
               
             </a>
            
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" [routerLink]="['/forum']">
+            <a class="nav-link" [routerLink]="['/gestionCommentaire']">
                 <span class="menu-icon">
                     <i class="bi bi-chat-left-fill text-white"></i>
                 </span>
-                <span class="menu-title menuside fw-bold">Gestion Rôles</span>
+                <span class="menu-title fw-bold menuside">Gestion Commentaire</span>
+              
+            </a>
+           
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" [routerLink]="['/gestionGuide']">
+                <span class="menu-icon">
+                    <i class="bi bi-chat-left-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Guides</span>
+              
+            </a>
+           
+        </li>
+        <li class="nav-item menu-items">
+
+            <a class="nav-link" [routerLink]="['/gestionRole']">
+                <span class="menu-icon">
+                    <i class="bi bi-chat-left-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Rôle</span>
+
               
             </a>
            
         </li>
     
+
 
       </ul>
   </nav>
@@ -314,89 +382,297 @@
                     <a href="#"><li>4</li></a>
                     <a href="#"><li>></li></a>
                   </ul>
+
+
+    </ul>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar p-0 fixed-top d-flex flex-row ">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center 
+        ">
+            <a class="navbar-brand brand-logo-mini" href="index.html"></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+           
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-100 d-flex justify-content-end">
+                    <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex   search " id="search">
+                        <input type="text" class="form-control d-flex justify-content-end" placeholder="Rechercher">
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown border-left">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                        data-toggle="dropdown">
+                        <i class="mdi mdi-bell"></i>
+                        <span class="count bg-danger"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                        aria-labelledby="notificationDropdown">
+                        <h6 class="p-3 mb-0">Notifications</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-calendar text-success"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Event today</p>
+                                <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event
+                                    today </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-settings text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Settings</p>
+                                <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-link-variant text-warning"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Launch Admin</p>
+                                <p class="text-muted ellipsis mb-0"> New admin wow! </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <p class="p-3 mb-0 text-center">See all notifications</p>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                        <div class="navbar-profile">
+                            <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                            <p class="mb-0 d-none d-sm-block navbar-profile-name">Admin</p>
+                            <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                        aria-labelledby="profileDropdown">
+                        <h6 class="p-3 mb-0">Profil</h6>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-logout text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Se deconnecter</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                data-toggle="offcanvas">
+                <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- partial -->
+    <div class="main-panel ">
+        <div class="content-wrapper ">
+            <div class="row">
+                <div class="col-sm-4 grid-margin">
+                    <div class="card">
+                        <div class="card-body border-0" style=" border:none !important" >
+                            <h5 class="d-flex justify-content-center">Projets</h5>
+                            <div class="row">
+                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                    <div class="d-flex justify-content-center">
+                                        <h2 class="mb-0">122</h2>
+                                        
+                                    </div>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-              </div>
-
-                <!-- <div class="container  mx-auto">
-                  <div class="mesCartes row gap-2 ">
-                      <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
-                          <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
-                          <div class="container mt-2">
-                             <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
-                            <p class="card-text datepub">Publié le 23/12/2012</p>
-                           
+                <div class="col-sm-4 grid-margin">
+                    <div class="card">
+                        <div class="card-body " style=" border:none !important">
+                            <h5 class="d-flex justify-content-center">Guides</h5>
+                            <div class="row">
+                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                    <div class="d-flex justify-content-center">
+                                        <h2 class="mb-0">22</h2>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 grid-margin">
+                    <div class="card">
+                        <div class="card-body" style=" border:none !important">
+                            <h5 class="d-flex justify-content-center">Entrepreneurs</h5>
+                            <div class="row">
+                                <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                    <div class="d-flex justify-content-center">
+                                        <h2 class="mb-0">125</h2>
+                                        
+                                    </div>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+                <div class="bg-white dark:bg-gray-900 dark:border-gray-800 w-20 flex-shrink-0 border-r border-gray-200 flex-col hidden sm:flex">
+                </div>
+                <div class="flex-grow overflow-hidden h-full flex flex-col">
+                  <div class="flex-grow flex overflow-x-hidden">
+                    <div class="flex-grow bg-white dark:bg-gray-900 overflow-y-auto">
+                      <div class="sm:p-7 p-4">
+                        <div class="flex w-full items-center mb-7">
+                          <div class="ml-auto text-gray-500 text-xs sm:inline-flex hidden items-center">
                           </div>
                         </div>
-                      <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
-                          <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
-                          <div class="container mt-2">
-                             <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
-                            <p class="card-text datepub">Publié le 23/12/2012</p>
-                           
-                          </div>
+                        <table class="w-100 text-left">
+                          <thead>
+                            <tr class="text-gray-400">
+                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Type</th>
+                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Nom</th>
+                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800 hidden md:table-cell">Titre</th>
+                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Description</th>
+                              <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody class="text-gray-600 dark:text-gray-100">
+                            <tr>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  
+                                  La technologie
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  TechTalk Central
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Dévéloppement web</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                 
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  La technologie
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  TechTalk
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                La technologie
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  TechTalk
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">développement web</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-red-500">Lorem</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  La technologie
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  TechTalk
+                                </div>
+                              </td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 md:table-cell hidden">Développement web</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800 text-green-500">Lorem</td>
+                              <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+                                <div class="flex items-center">
+                                  <button class="btn  me-md-2" type="button" style="background-color:#60B8C4; color:white">Reporter</button>
+                                  <button class="btn " type="button" style="border: 1px solid #60B8C4;">Annuler</button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="paginattion mt-5">
+                          <i class="bi bi-chevron-left mt-1"></i>
+                          <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border leading-none mx-1">1</button>
+                          <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 dark:text-white leading-none mx-1">2</button>
+                          <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border border-gray-200 dark:border-gray-800 leading-none ">3</button>
+                          <button class="inline-flex items-center h-8 w-8 justify-center text-gray-500 rounded-md shadow border leading-none mx-1">4</button>
+                          <i class="bi bi-chevron-right mt-1"></i>
+                         
                         </div>
-                      <div class="card col-md-4" style="width: 18rem;" id="carteProjet">
-                          <img src="https://img.freepik.com/free-photo/focused-woman-testing-vr-headset_74855-4231.jpg?size=626&ext=jpg&ga=GA1.1.522834921.1700648147&semt=sph" class="" height="70%" alt="...">
-                          <div class="container mt-2">
-                             <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span>  <button class="btn btnClose mt-1 consulter">Consulter</button></p> 
-                            <p class="card-text datepub">Publié le 23/12/2012</p>
-                           
-                          </div>
-                        </div>
-                      
-                    
-
+                      </div>
+                    </div>
                   </div>
-                  <div class="pagination">
-                   
-                  </div>
-              </div> -->
-              </div>
-              
-          </div>
-      </div>
-      <!-- main-panel ends -->
-      
-
-  </div>
-  <!-- page-body-wrapper ends -->
-  
-</div>
-
-
-<img src="" alt="">
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajout projet</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-          <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Titre projet</label>
-                <input type="text" name="titre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-              </div>
-              <div class="mb-3">
-                  <label for="formFile" class="form-label">Image du projet</label>
-                  <input class="form-control" name="image" type="file" id="formFile" ="image">
                 </div>
-              <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description du projet</label>
-                </div>
-            
-            </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btnAjout" data-bs-dismiss="modal" >Ajouter</button>
-        <button type="button" class=" btn btnClose" data-bs-dismiss="modal">Annuler</button>
-      </div>
+              </div>
+             </div>
+             
     </div>
-  </div>
+    <!-- main-panel ends -->
+
+<!-- partial:index.partial.html -->
+
+
+
+    </div>
 </div>
 

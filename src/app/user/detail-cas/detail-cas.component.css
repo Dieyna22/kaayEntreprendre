@@ -1,0 +1,31 @@
+.contenBanniere {
+    margin-top: 5%;
+    background-color: #60b8c4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 85vh;
+    padding-top: 5%;
+}
+
+.titres {
+    font-size: 70px;
+}
+.contenu {
+    display: flex;
+}
+
+.image {
+    margin-right: 14px;
+}
+
+.imgPricinpal img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 2px;
+}
+
+.descEven {
+    margin-top: 20px;
+    text-align: justify;
+}

@@ -1,0 +1,44 @@
+.contenBanniere {
+    margin-top: 5%;
+    background-color: #60b8c4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 85vh;
+    padding-top: 5%;
+}
+
+.titres {
+    font-size: 70px;
+}
+.details h2 {
+   text-align: center;
+}
+
+.cartes {
+    display:grid;
+    grid-template-columns: 70% 20%;
+    margin: 0 20px;
+}
+
+.even {
+    background-color: #F6F6F6;
+    width: 300px;
+    padding: 20px;
+    height: 75%;
+    margin: 0 10px;
+}
+
+.cardEven {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.cardEven img {
+    margin-right: 15px;
+}
+.bgbtn{
+    color: #fff;
+    background-color: #60B8C4;
+    float: right;
+}

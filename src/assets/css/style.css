@@ -12418,8 +12418,8 @@ fieldset:disabled .wizard>.actions a,
 
 .btn-success {
   color: #fff;
-  background-color: #CE6A6B;
-  border-color: #CE6A6B;
+  background-color: #60b8c4;
+  border-color: #60b8c4;
 }
 
 .btn-success:focus,
@@ -15734,7 +15734,7 @@ input[type="button"].btn-block {
   background-color: #ffffff;
   box-shadow: 10px 5px 35px #e0dfdf;
   background-clip: border-box;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 
 .card>hr {
@@ -29556,7 +29556,7 @@ div.tagsinput span.tag a {
 /* Navbar */
 .navbar {
   font-weight: normal;
-  background: #0594D0;
+  background: #60b8c4;
   left: 244px;
   transition: left 0.25s ease;
   -webkit-transition: left 0.25s ease;
@@ -29953,7 +29953,7 @@ div.tagsinput span.tag a {
 .navbar .navbar-menu-wrapper .search input {
   background: white;
   padding: 13px 20px 11px 20px;
-  border: 1px solid #0594D0;
+  border: 1px solid #60b8c4;
 }
 
 .navbar .navbar-menu-wrapper .search input::placeholder {
@@ -29995,13 +29995,14 @@ div.tagsinput span.tag a {
 }
 
 .sidebar-tinted .navbar .navbar-brand-wrapper {
-  background: #fa424a;
+  background: #60b8c4;
 }
+
 
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 70px);
-  background: #0594D0;
+  background: #60b8c4;
   font-weight: normal;
   padding: 0;
   width: 244px;
@@ -30017,7 +30018,7 @@ div.tagsinput span.tag a {
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
-  background: #0594D0;
+  background: #60b8c4;
   width: 244px;
   height: 70px;
 }
@@ -30429,8 +30430,8 @@ div.tagsinput span.tag a {
 }
 
 .sidebar .nav:not(.sub-menu)>.nav-item:hover:not(.nav-category):not(.account-dropdown)>.nav-link {
-  background: #CE6A6B;
-  color: #ffffff;
+  background: white;
+  color: #60b8c4;
 }
 
 .sidebar .nav .menu-items:nth-child(5n+1) .nav-link .menu-icon i {

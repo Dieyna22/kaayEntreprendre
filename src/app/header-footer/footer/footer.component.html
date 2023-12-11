@@ -1,1 +1,91 @@
-<p>footer works!</p>
+<footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-12 footer-about">
+         <div class="logoEn ">
+            <a [routerLink]="['/accueilUser']" class="logo d-flex align-items-center">
+                <div class="photo " style="background-image: url('assets/image/image-removebg-preview (1).png'); height: 200px; width: 200px;margin-top: -70px; background-size: contain; background-position: center; background-repeat: no-repeat ;">
+                    <!-- <img src="assets/image/image-removebg-preview (1).png" id="image"> -->
+                </div>
+            </a>
+         </div>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links ">
+          <h4>PAGES</h4>
+          <ul>
+            <li class="fs-5">
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter" [routerLink]="['/accueilUser']">Acceuil</a>
+            </li>
+            <li class="fs-5">
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter"  [routerLink]="['/guide']">Guide</a>
+            </li>
+            <li class="fs-5">
+                <i class="bi bi-chevron-right"></i>
+                <a  id="lienFooter"  [routerLink]="['/ressourceUser']">Ressources</a>
+            </li>
+            <li class="fs-5">
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter"  [routerLink]="['/etudeCas']">Etude de cas</a>
+            </li>
+            <li class="fs-5">
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter"  [routerLink]="['/forum']">Forum</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6 footer-links">
+          <h4>POLITIQUES</h4>
+          <ul>
+            <li>
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter" >Condition d'utilisation</a>
+            </li>
+            <li>
+                <i class="bi bi-chevron-right"></i>
+                <a id="lienFooter" >Politique de Confidentialité</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>CONTACTEZ-NOUS</h4>
+          <p id="lienFooter" >
+            <i class="bi bi-geo-alt-fill"></i>
+            Mermoz
+         </p>
+          <p id="lienFooter" >
+            <i class="bi bi-envelope-fill"></i>
+            exemplegmail.com</p>
+            <div class="mb-3">
+              <input type="email" class="form-control newsletter" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <button type="button" class="btn news">S'incrire</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+        <hr>
+      <p>&copy; <span>Copyright</span> <strong class="px-1"></strong> <span>SIMPLONSENEGAL</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+ 

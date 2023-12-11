@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="contenBanniere">
+    <div class="left ms-5">
+        <span class="fw-bold " id="bien">Bienvenu sur</span>
+        <p class="titres text-white fw-bold">RESSOURCES</p>
+        <p class="text-white">Bienvenue sur KAAY ENTREPRENDRE, l'endroit où l'expérience rencontre l'innovation, et où
+            les entrepreneurs chevronnés partagent leur sagesse avec ceux qui débutent leur parcours entrepreneurial.
+        </p>
+    </div>
+</div>
+<div class="container mt-5  mx-auto">
+    <div class="cartes">
+        <div class="mesVideos">
+            <div class="video1">
+                <iframe width="727" height="250" src="https://www.youtube.com/embed/T2fxGXQIlX8"
+                    title="COMMENT DEVENIR UN ENTREPRENEUR [ DÉBUT, FINANCEMENT, FORMATION]" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="videos">
+                <div class="video2 me-2">
+                    <iframe width="360" height="180" src="https://www.youtube.com/embed/dk153YvEztw"
+                        title="Sénégal: les jeunes diplômés virent vers l´entrepreneuriat" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video2"><iframe width="360" height="180" src="https://www.youtube.com/embed/1TAN6PsxKAc"
+                    title="Il faut toujours « essayer, tenter, ne pas avoir peur d’échouer »" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe></div>
+            </div>
+        </div>
+        <div class="even">
+            <h5>Evenements</h5>
+            <div class="cardEven">
+                <img src="https://demo.htmlcodex.com/1858/startup-website-template/img/blog-1.jpg" style="width:80px;">
+                <p>Webinaire sur les Tendances Technologiques Futures</p>
+            </div>
+            <div class="cardEven">
+                <img src="https://demo.htmlcodex.com/1858/startup-website-template/img/blog-1.jpg" style="width:80px;">
+                <p>Webinaire sur les Tendances Technologiques Futures</p>
+            </div>
+            <div class="cardEven">
+                <img src="https://demo.htmlcodex.com/1858/startup-website-template/img/blog-1.jpg" style="width:80px;">
+                <p>Webinaire sur les Tendances Technologiques Futures</p>
+            </div>
+            <div class="cardEven">
+                <img src="https://demo.htmlcodex.com/1858/startup-website-template/img/blog-1.jpg" style="width:80px;">
+                <p>Webinaire sur les Tendances Technologiques Futures</p>
+            </div>
+        </div>
+    </div>
+    <div class="ressoureces mt-5">
+        <div class="secteur">
+            <h5>Secteurs</h5>
+            <p>technologie</p>
+            <p>Santé</p>
+            <p>Elevage</p>
+            <p>Agriculture</p>
+        </div>
+        <div class="carteRessources mb-5">
+            <div class="card" style="width: 18rem;" *ngFor="let ressource of recupRessource">
+                <img [src]="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4>titre</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    <a href="#" class="btn  btnRessource">voir</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
