@@ -24,8 +24,8 @@ export class AuthComponent implements OnInit{
   userConnect: any;
 
   constructor(private route:Router, private authService: AuthService){}
-  ngOnInit(): void {
-    this.User();
+  ngOnInit() {
+   
   }
 
   public afficherFormulaire() {
@@ -60,52 +60,41 @@ export class AuthComponent implements OnInit{
 
   
 // connexion
+
 login() {
-  this.loading = true;
+  // alert('connecter');
   if (this.emailLogin == "" || this.passwordLogin == "") {
-    this.showMessage("error","Oops", "Veuillez remplir tout les champs");
+    this.showMessage("error", "Oops","Veuillez renseigner tous les champs");
   } else {
-    this.authService.login(this.emailLogin, this.passwordLogin).pipe(
-      tap(() => {
-        this.userConnected = JSON.parse(localStorage.getItem('userConnected') || "");
-        // console.log(this.userConnected.role);
 
-        this.loading = false;
+    this.authService.login({ email: this.emailLogin, password: this.passwordLogin }, (reponse: any) => {
 
-        if (this.authService.isAdmin$ && this.emailLogin == "admin@gmail.com" && this.passwordLogin == "passer") {
+      console.log(reponse);
+      if (reponse.token) {
+        this.showMessage("success","Felicitations" ,"Connexion faite avec succès");
+
+        //stocker notre les info de la requete dans notre localstorage
+        localStorage.setItem("userOnline", JSON.stringify(reponse));
+
+        //recuperer le le userConnecter
+        const userOnline = JSON.parse(localStorage.getItem('userOnline') || '');
+
+        if (reponse.user.role_id === 1) {
           this.route.navigate(['/accueilAdmin']);
-        }
-
-        if (this.authService.isExperimente$) {
+        } else if (reponse.user.role_id === 3) {
           this.route.navigate(['/accueilEntrepreneur']);
+        } else {
+          this.route.navigate(['/accueilUser']);
         }
-
-        if (this.authService.isNovice$) {
-          this.route.navigate(['/acceuilUser']);
-        }
-      }),
-      catchError((error:any) => {
-        this.loading = false;
-        this.errorMsg = error.message;
-        return EMPTY;
-      })
-    ).subscribe();
-
+      } else {
+        this.showMessage("error", "Oops","Login ou pass incorrect");
+      }
+    });
   }
 }
 
-User(){
-  this.authService.getUsers().subscribe((reponse:any)=>{
-    this.users=reponse;
-    console.log('tea', this.users)
-    if( this.users){
-      this.userConnect=this.users.find((element:any)=>element.email===this.emailLogin )
 
-    }
-    console.log(this.userConnect)
-  })
 
-}
 
 
 // sweetalert
@@ -218,7 +207,9 @@ showMessage(icon:any, titre:any, texte:any){
     this.authService.signIn(this.credentials).subscribe(
       (response:any) => {
         // Stockez le token dans un service ou dans le stockage local (localStorage).
-       
+        console.log(response)
+        
+       console.log(this.user)
        
         console.log(this.credentials)
         this.route.navigate(['/accueilUser'])

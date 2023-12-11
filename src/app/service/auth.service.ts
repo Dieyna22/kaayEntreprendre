@@ -17,36 +17,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
   // login
-  login(email: string, password: string) {
-    return this.http.post<{ status_body: string, token: string }>('http://localhost:8000/api/login', { email: email, password: password }).pipe(
-      tap(({ status_body, token }) => {
-        this.userObj = status_body;
-        this.authToken = token;
-        if (email == "dialobe110@gmail.com" && password == "Passer@123") {
-          this.isAdmin$.next(true);
-        } else
-          localStorage.setItem('token', JSON.stringify(this.authToken));
-        localStorage.setItem('userConnected', JSON.stringify(this.userObj));
-
-        let userCon = JSON.parse(localStorage.getItem('userConnected') || '')
-
-        if (userCon.role === "entrepreneur_experimente") {
-          this.isExperimente$.next(true)
-        } else if (userCon.role === "entrepreneur_novice") {
-          this.isNovice$.next(true);
-        } else {
-          this.showMessage("error", 'Oops',"Email ou mot de passe incorrecte")
-        }
-
-        this.isAuth$.next(true); // on met à je la val de isAuth$
-
-        console.log(this.isAdmin$)
-        console.log(this.isExperimente$)
-        console.log(this.isNovice$)
-      })
-    );
+   //service
+   login(user: any, onSuccess: Function){
+    return this.http.post(`${this.apiUrl}/login`, user).subscribe((reponse: any) => onSuccess(reponse));
   }
-
   // connexion
 
 
