@@ -32,6 +32,10 @@
     font-size: 14px;
     font-family: var(--heading-font);
   }
+
+    .social-links{
+      margin-top: -85px;
+    }
   
   .footer .social-links a {
     display: flex;
@@ -54,7 +58,7 @@
   
   .footer h4 {
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     padding-bottom: 12px;
@@ -119,4 +123,25 @@
     width: 300px;
     height: 4000px;
   }
-  
+  .newsletter{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: #ffffff6c;
+    border-radius: 0;
+  }
+  .newsletter::placeholder{
+    color: #fff;
+  }
+  .news{
+    border-radius: 0;
+    background-color: #fff;
+    color: #000 !important;
+    font-weight: bold;
+    width: 65%;
+  }
+a{
+  text-decoration: none;
+}
+#lienFooter{
+  font-size: 18px;
+}

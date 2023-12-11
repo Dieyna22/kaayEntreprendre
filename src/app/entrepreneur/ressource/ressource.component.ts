@@ -37,7 +37,7 @@ export class RessourceComponent implements OnInit{
     const ressource={
       titre:this.titre,
       lien: this.lien,
-      image:this.image,
+      // image:this.image,
       description:this.description 
     }
     this.ressourceService.postRessource(ressource).subscribe((data:any)=>{
