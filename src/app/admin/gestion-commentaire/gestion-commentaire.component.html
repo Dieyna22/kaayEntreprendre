@@ -10,7 +10,7 @@
          
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" >
+            <a class="nav-link" [routerLink]="['/AcceuilAdmin']">
                 <span class="menu-icon">
                     <i class="mdi mdi-speedometer text-white"></i>
                 </span>
@@ -18,7 +18,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a  class="nav-link " >
+            <a class="nav-link" [routerLink]="['/gestionUsers']">
                 <span class="menu-icon">
                     <i class="bi bi-house-door-fill text-white"></i>
                 </span>
@@ -26,8 +26,7 @@
             </a>
         </li>
         <li class="nav-item menu-items ">
-            <a class="nav-link " data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                aria-controls="ui-basic">
+            <a class="nav-link" [routerLink]="['/gestionForum']">
                 <span class="menu-icon">
                     <i class="bi bi-person-fill text-white"></i>
                 </span>
@@ -37,7 +36,7 @@
          
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" >
+            <a class="nav-link" [routerLink]="['/gestionEvenement']">
                 <span class="menu-icon">
                     <i class="bi bi-chat-left-fill text-white"></i>
                 </span>
@@ -47,7 +46,7 @@
            
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" >
+            <a class="nav-link" [routerLink]="['/gestionSecteur']">
                 <span class="menu-icon">
                     <i class="bi bi-chat-left-fill text-white"></i>
                 </span>
@@ -56,28 +55,28 @@
             </a>
            
         </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" [routerLink]="['/gestionCommentaire']">
+                <span class="menu-icon">
+                    <i class="bi bi-chat-left-fill text-white"></i>
+                </span>
+                <span class="menu-title fw-bold menuside">Gestion Commentaire</span>
+              
+            </a>
+           
+        </li>
         <li class="nav-item menu-items isactive">
-            <a class="nav-link" >
+            <a class="nav-link" [routerLink]="['/gestionGuide']">
                 <span class="menu-icon p-2">
                     <i class="bi bi-collection-fill text-white"></i>
                 </span>
-                <span class="menu-title menuside" style="color: #60b8c4; font-weight: bold;">Gestion Commentaire</span>
+                <span class="menu-title menuside" style="color: #60b8c4; font-weight: bold;">Gestion Guide</span>
              
             </a>
            
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" >
-                <span class="menu-icon">
-                    <i class="bi bi-chat-left-fill text-white"></i>
-                </span>
-                <span class="menu-title fw-bold menuside">Gestion Guides</span>
-              
-            </a>
-           
-        </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link" >
+            <a class="nav-link" [routerLink]="['/gestionRole']">
                 <span class="menu-icon">
                     <i class="bi bi-chat-left-fill text-white"></i>
                 </span>
