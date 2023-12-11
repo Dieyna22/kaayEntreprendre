@@ -83,5 +83,6 @@ input, textarea{
     width: 35% !important;
     border-radius: 0;
     border-top-left-radius:50px ;
-    border-bottom-right-radius:50px ;   
+    border-bottom-right-radius:50px ;
+    background-color: #60b8c4;   
 }
