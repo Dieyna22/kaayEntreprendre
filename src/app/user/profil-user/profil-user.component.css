@@ -1,0 +1,36 @@
+.imageProfil {
+    width: 100px;
+    height: 100px;
+    margin-top: 15%;
+    border-radius: 20px;
+    margin-left: 45%;
+}
+.btnAjout {
+    background-color: #60b8c4;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+.positionbtn{
+    float: right;
+}
+.clrbtn{
+    background-color: #fff;
+    color: #60b8c4;
+    border: thin solid #60b8c4;
+}
+.contenBanniere {
+    margin-top: 5%;
+    background-color: #60b8c4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 55vh;
+    padding-top: 5%;
+}
+
+.titres {
+    font-size: 70px;
+}

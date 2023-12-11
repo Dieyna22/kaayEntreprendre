@@ -1,3 +1,13 @@
+<app-header></app-header>
+<div class="contenBanniere">
+    <div class="left ms-5">
+        <span class="fw-bold " id="bien">Bienvenu sur</span>
+        <p class="titres text-white fw-bold">Etude de Cas</p>
+        <p class="text-white">Bienvenue sur KAAY ENTREPRENDRE, l'endroit où l'expérience rencontre l'innovation, et où
+            les entrepreneurs chevronnés partagent leur sagesse avec ceux qui débutent leur parcours entrepreneurial.
+        </p>
+    </div>
+</div>
 <div class="container">
     <div class="search mt-4">
         <select class="form-select" aria-label="Default select example">
@@ -16,7 +26,7 @@
             <p>Une guide pas à pas sur des langages de programmation (comme HTML, CSS, JavaScript), des frameworks
                 (comme React,
                 Angular, Vue.js), ou des outils de développement (Visual Studio Code, Git).</p>
-            <button class="iconedroite">
+            <button class="iconedroite" [routerLink]="['/detailsCas']">
                 Voir
             </button>
         </div>
@@ -106,3 +116,4 @@
 
     </div>
 </div>
+<app-footer></app-footer>

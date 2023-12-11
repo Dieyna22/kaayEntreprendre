@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class GuideService {
 
-  apiUrl = 'http://127.0.0.1:8000';
+  apiUrl = 'http://127.0.0.1:8000/api';
 
 
   constructor(private http: HttpClient) { }
   getGuide() {
-    return this.http.get(`${this.apiUrl}`);
+    return this.http.get(`${this.apiUrl}/guides`);
   }
 
   // Méthode pour ajouter un guide
