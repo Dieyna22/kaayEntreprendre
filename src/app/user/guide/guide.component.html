@@ -1,61 +1,24 @@
-<div class="container  mx-auto">
+<app-header></app-header>
+<div class="contenBanniere">
+    <div class="left ms-5">
+        <p class="titres text-white fw-bold">GUIDE</p>
+        <p class="text-white">Bienvenue sur KAAY ENTREPRENDRE, l'endroit où l'expérience rencontre l'innovation, et où
+            les entrepreneurs chevronnés partagent leur sagesse avec ceux qui débutent leur parcours entrepreneurial.
+        </p>
+    </div>
+</div>
+<div class="container mt-5 mx-auto">
     <div class="cartes">
         <div class="mesCartes row  gap-3">
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
+            <ng-container *ngFor="let guide of recupGuides">
+                <div class="card col-md-5" id="carteProjet" *ngFor="let item of guide  " >
+                    <div class="container mt-2">
+                        <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre"> <span class="num">{{item.id}}.</span> {{item.titre}}</span> </p>
+                        <p class="card-text ">{{item.contenu}}</p>
+                        <button class="btn btnClose mt-1 consulter" [routerLink]="['/detailsGuide']">Voir</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
-                </div>
-            </div>
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
-                </div>
-            </div>
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
-                </div>
-            </div>
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
-                </div>
-            </div>
-            <div class="card col-md-5" id="carteProjet">
-                <div class="container mt-2">
-                    <p class="d-flex justify-content-between mt-md-0"><span class="fw-bold titre">Lorem</span> </p>
-                    <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit aliquid
-                        nostrum blanditiis id laboriosam nobis rem maiores accusamus tempora dignissimos, hic aspernatur,
-                        tempore voluptates perspiciatis, vero officia nam architecto.</p>
-                    <button class="btn btnClose mt-1 consulter">Voir</button>
-                </div>
-            </div>
-
+            </ng-container>
             <div class="pagination p1">
                 <ul>
                     <a href="#">
@@ -108,3 +71,4 @@
     </div>
 
 </div>
+<app-footer></app-footer>

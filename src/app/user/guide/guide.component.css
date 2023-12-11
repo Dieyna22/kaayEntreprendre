@@ -1,9 +1,22 @@
+.contenBanniere {
+    margin-top: 5%;
+    background-color: #60b8c4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 85vh;
+    padding-top: 5%;
+}
+.titres {
+    font-size: 70px;
+}
 .container .mesCartes {
     margin: 0 auto;
 }
 
 #carteProjet {
-    height: 40vh;
+    width: 350px;
+    padding: 8px;
     border-radius: 0;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -18,13 +31,14 @@
     float: right;
 }
 .cartes{
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 .even{
     background-color: #F6F6F6;
-    width: 300vh;
-    padding: 20px;
-    height: 75%;
+    width: 300px;
+    height: 60vh;
+    padding: 10px;
 }
 .cardEven{
     display: flex;
@@ -66,4 +80,7 @@
     border-radius: 100%;
     color: #fff;
 }
-
+.num{
+    color: #60B8C4 !important;
+    font-size: 24px;
+}

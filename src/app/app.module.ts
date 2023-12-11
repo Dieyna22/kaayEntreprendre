@@ -32,6 +32,7 @@ import { DetailGuideComponent } from './user/detail-guide/detail-guide.component
 import { DetailEvenComponent } from './user/detail-even/detail-even.component';
 import { DetailCasComponent } from './user/detail-cas/detail-cas.component';
 import { UserRessourceComponent } from './user/user-ressource/user-ressource.component';
+import { ProfilUserComponent } from './user/profil-user/profil-user.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { UserRessourceComponent } from './user/user-ressource/user-ressource.com
     DetailEvenComponent,
     DetailCasComponent,
     UserRessourceComponent,
+    ProfilUserComponent,
   ],
   imports: [
     BrowserModule,

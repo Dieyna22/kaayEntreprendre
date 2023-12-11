@@ -25,6 +25,7 @@ import { DetailGuideComponent } from './user/detail-guide/detail-guide.component
 import { DetailEvenComponent } from './user/detail-even/detail-even.component';
 import { DetailCasComponent } from './user/detail-cas/detail-cas.component';
 import { UserRessourceComponent } from './user/user-ressource/user-ressource.component';
+import { ProfilUserComponent } from './user/profil-user/profil-user.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'detailsCas', component: DetailCasComponent },
   { path: 'evenement', component: EvenementComponent },
   { path: 'detailsEvenement', component: DetailEvenComponent },
+  { path: 'profilUser', component: ProfilUserComponent },
 ];
 
 @NgModule({

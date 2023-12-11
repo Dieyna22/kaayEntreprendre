@@ -7,12 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class RessourceService {
 
-  apiUrl ='http://127.0.0.1:8000/ressources';
+  apiUrl = 'http://127.0.0.1:8000/api';
+
 
 
   constructor(private http: HttpClient) { }
   getRessource() {
-    return this.http.get(`${this.apiUrl}`);
+    return this.http.get(`${this.apiUrl}/ressources`);
   }
 
   // Méthode pour ajouter un ressource
