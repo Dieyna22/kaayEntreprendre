@@ -17,7 +17,7 @@ export class SecteurService {
 
   // Méthode pour ajouter un secteur
   postSecteur(secteur: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}`, secteur);
+    return this.http.post<any>(`http://127.0.0.1:8000/api/ajouter-Secteur`, secteur);
   }
 
   // Méthode pour supprimer un secteur
